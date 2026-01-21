@@ -39,7 +39,7 @@ nix = { version = "0.30", default-features = false, features = [
     "net",
 ] }
 
-[target.'cfg(unix)'.dependencies.gotatun]
+[target.'cfg(unix)'.dependencies.ana-gotatun]
 version = "0.2.0"
 path = "../gotatun"
 features = ["device", "tun"]

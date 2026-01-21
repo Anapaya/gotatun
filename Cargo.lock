@@ -28,6 +28,51 @@ dependencies = [
 ]
 
 [[package]]
+name = "ana-gotatun"
+version = "0.2.0"
+dependencies = [
+ "aead",
+ "base64 0.13.1",
+ "bitfield-struct",
+ "blake2",
+ "bytes",
+ "chacha20poly1305",
+ "constant_time_eq",
+ "criterion",
+ "duplicate",
+ "either",
+ "etherparse",
+ "eyre",
+ "futures",
+ "hex",
+ "hmac",
+ "ip_network",
+ "ip_network_table",
+ "ipnetwork",
+ "libc",
+ "log",
+ "maybenot",
+ "mock_instant",
+ "nix",
+ "parking_lot",
+ "pcap-file",
+ "pnet_packet",
+ "rand",
+ "rand_chacha",
+ "rand_core 0.6.4",
+ "rand_xorshift",
+ "ring",
+ "socket2",
+ "thiserror 1.0.69",
+ "tokio",
+ "tun",
+ "typed-builder",
+ "windows-sys 0.60.2",
+ "x25519-dalek",
+ "zerocopy",
+]
+
+[[package]]
 name = "anes"
 version = "0.1.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -795,58 +840,13 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0cc23270f6e1808e30a928bdc84dea0b9b4136a8bc82338574f23baf47bbd280"
 
 [[package]]
-name = "gotatun"
-version = "0.2.0"
-dependencies = [
- "aead",
- "base64 0.13.1",
- "bitfield-struct",
- "blake2",
- "bytes",
- "chacha20poly1305",
- "constant_time_eq",
- "criterion",
- "duplicate",
- "either",
- "etherparse",
- "eyre",
- "futures",
- "hex",
- "hmac",
- "ip_network",
- "ip_network_table",
- "ipnetwork",
- "libc",
- "log",
- "maybenot",
- "mock_instant",
- "nix",
- "parking_lot",
- "pcap-file",
- "pnet_packet",
- "rand",
- "rand_chacha",
- "rand_core 0.6.4",
- "rand_xorshift",
- "ring",
- "socket2",
- "thiserror 1.0.69",
- "tokio",
- "tun",
- "typed-builder",
- "windows-sys 0.61.2",
- "x25519-dalek",
- "zerocopy",
-]
-
-[[package]]
 name = "gotatun-cli"
 version = "0.2.0"
 dependencies = [
+ "ana-gotatun",
  "clap 3.2.25",
  "daemonize",
  "eyre",
- "gotatun",
  "libc",
  "log",
  "nix",

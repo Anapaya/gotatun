@@ -51,7 +51,7 @@ impl DeviceBuilder<Nul, Nul, Nul> {
     ///
     /// # Example
     /// ```no_run
-    /// use gotatun::device::DeviceBuilder;
+    /// use ana_gotatun::device::DeviceBuilder;
     ///
     /// let device = DeviceBuilder::new()
     ///     .with_default_udp()
