@@ -456,10 +456,8 @@ impl<T: DeviceTransports> DeviceState<T> {
             peer_builder.keepalive,
             index,
             rate_limiter,
-            // If we don't have a socket address available, we return a bogus one.
-            peer_builder
-                .endpoint
-                .unwrap_or("127.0.0.1:0".parse().unwrap()),
+            // XXX(dsd): this is unused in standard WireGuard and set here only to make tests work.
+            "127.0.0.1:0".parse().unwrap(),
         );
 
         PeerState::new(
