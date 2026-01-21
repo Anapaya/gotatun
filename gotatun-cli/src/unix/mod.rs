@@ -5,12 +5,12 @@
 //
 // SPDX-License-Identifier: BSD-3-Clause
 
+use ana_gotatun::device::uapi::UapiServer;
+use ana_gotatun::device::{DefaultDeviceTransports, Device, DeviceBuilder};
+use ana_gotatun::tun::tun_async_device::TunDevice;
 use clap::Parser;
 use daemonize::Daemonize;
 use eyre::{Context, Result, bail};
-use gotatun::device::uapi::UapiServer;
-use gotatun::device::{DefaultDeviceTransports, Device, DeviceBuilder};
-use gotatun::tun::tun_async_device::TunDevice;
 use std::fs::File;
 use std::future::Future;
 use std::os::unix::net::UnixDatagram;

@@ -17,7 +17,7 @@
 //!     0x33, 0x34, 0x35, 0x36, 0x37,
 //! ];
 //!
-//! use gotatun::packet::{Ipv4, Ipv4Header, IpNextProtocol};
+//! use ana_gotatun::packet::{Ipv4, Ipv4Header, IpNextProtocol};
 //! use zerocopy::FromBytes;
 //! use std::net::Ipv4Addr;
 //!
@@ -81,7 +81,7 @@ pub use wg::*;
 /// [`Packet`] uses [`BytesMut`] as the backing buffer.
 ///
 /// ```
-/// use gotatun::packet::*;
+/// use ana_gotatun::packet::*;
 /// use std::net::Ipv4Addr;
 /// use zerocopy::IntoBytes;
 ///

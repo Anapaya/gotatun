@@ -247,9 +247,9 @@ impl<T: DeviceTransports> DeviceWrite<'_, T> {
     /// Takes a callback `f` which allows you to configure individual fields on this peer.
     ///
     /// ```
-    /// use gotatun::device::Device;
+    /// use ana_gotatun::device::Device;
     /// # async {
-    /// # let device: Device<gotatun::device::DefaultDeviceTransports> = todo!();
+    /// # let device: Device<ana_gotatun::device::DefaultDeviceTransports> = todo!();
     /// # let peer = todo!();
     /// # let public_key = todo!();
     /// device.write(async |device| {
@@ -386,9 +386,9 @@ impl<T: DeviceTransports> Device<T> {
     ///
     /// # Example
     /// ```
-    /// use gotatun::device::Device;
+    /// use ana_gotatun::device::Device;
     /// # async {
-    /// # let device: Device<gotatun::device::DefaultDeviceTransports> = todo!();
+    /// # let device: Device<ana_gotatun::device::DefaultDeviceTransports> = todo!();
     /// let (port, peers) = device.read(async |device| {
     ///     (device.listen_port(), device.peers().await)
     /// }).await;
@@ -407,9 +407,9 @@ impl<T: DeviceTransports> Device<T> {
     ///
     /// # Example
     /// ```
-    /// use gotatun::device::Device;
+    /// use ana_gotatun::device::Device;
     /// # async {
-    /// # let device: Device<gotatun::device::DefaultDeviceTransports> = todo!();
+    /// # let device: Device<ana_gotatun::device::DefaultDeviceTransports> = todo!();
     /// # let peer = todo!();
     /// device.write(async |device| {
     ///     device.clear_peers();
@@ -507,9 +507,9 @@ impl<T: DeviceTransports> Device<T> {
     /// Takes a callback `f` which allows you to configure individual fields on this peer.
     ///
     /// ```
-    /// use gotatun::device::Device;
+    /// use ana_gotatun::device::Device;
     /// # async {
-    /// # let device: Device<gotatun::device::DefaultDeviceTransports> = todo!();
+    /// # let device: Device<ana_gotatun::device::DefaultDeviceTransports> = todo!();
     /// # let public_key = todo!();
     /// device.modify_peer(public_key, |peer| {
     ///     peer.set_endpoint(None);

@@ -14,7 +14,7 @@
 //! [`UapiServer::default_unix_socket`] and pass it to [`DeviceBuilder::with_uapi`]:
 //!
 //! ```no_run,ignore-windows
-//! use gotatun::device::{self, uapi::UapiServer};
+//! use ana_gotatun::device::{self, uapi::UapiServer};
 //!
 //! let uapi = UapiServer::default_unix_socket("my-gotatun", None, None)
 //!     .expect("Failed to create unix socket");
