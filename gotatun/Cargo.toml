@@ -18,7 +18,7 @@ readme = "../README.md"
 
 [features]
 default = []
-device = ["thiserror"]
+device = []
 pcap = ["dep:pcap-file"]
 # UDP GRO appears to be broken on Windows.
 # In some cases it fails to return UDP_COALESCED_INFO
