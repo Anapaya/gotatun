@@ -21,6 +21,7 @@ use constant_time_eq::constant_time_eq_n;
 use rand_core::OsRng;
 use ring::aead::{Aad, CHACHA20_POLY1305, LessSafeKey, Nonce, UnboundKey};
 use std::convert::TryInto;
+use std::net::SocketAddr;
 use std::time::{Duration, SystemTime};
 use zerocopy::{FromZeros, IntoBytes};
 
@@ -908,6 +909,11 @@ impl Handshake {
         let packet = buf.overwrite_with(&resp);
 
         (packet, Session::new(local_index, peer_index, temp2, temp3))
+    }
+
+    pub(super) fn get_initiator_remote_sockaddr(&self) -> Option<SocketAddr> {
+        self.local_initiator_remote_sockaddr
+            .and_then(|x| x.try_into().ok())
     }
 }
 
