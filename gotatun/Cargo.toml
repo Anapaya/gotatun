@@ -1,7 +1,7 @@
 [package]
 name = "ana-gotatun"
 description = "an implementation of the WireGuard® protocol designed for portability and speed with integrated STUN"
-version = "0.2.0-ana.0"
+version = "0.2.1-ana.0"
 authors = [
     "Anapaya & contributors",
     "Noah Kennedy <nkennedy@cloudflare.com>",
