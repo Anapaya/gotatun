@@ -5,7 +5,7 @@ resolver = "2"
 [workspace.package]
 rust-version = "1.88"
 edition = "2024"
-repository = "https://github.com/mullvad/gotatun"
+repository = "https://github.com/Anapaya/gotatun"
 license = "BSD-3-Clause"
 
 [profile.release]
