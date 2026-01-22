@@ -367,6 +367,11 @@ impl Tunn {
 
         (time, tx_bytes, rx_bytes, loss, rtt)
     }
+
+    /// Return the local socket address as seen by the remote.
+    pub fn get_initiator_remote_sockaddr(&self) -> Option<SocketAddr> {
+        self.handshake.get_initiator_remote_sockaddr()
+    }
 }
 
 #[cfg(test)]
